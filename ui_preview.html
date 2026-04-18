@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Brain Tumor DSS — UI Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: #080c14;
+    color: #dce3f0;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: #0c1220;
+    border-right: 1px solid #1a2540;
+    padding: 28px 20px;
+    flex-shrink: 0;
+  }
+  .sidebar-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .sidebar-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: #4a6fa5;
+    margin-bottom: 20px;
+  }
+  .divider { border: none; border-top: 1px solid #1a2540; margin: 16px 0; }
+  .sidebar-section-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4a6fa5;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .class-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .class-icon { font-size: 0.85rem; margin-top: 1px; }
+  .class-name { font-size: 0.85rem; font-weight: 700; color: #dce3f0; }
+  .class-info { font-size: 0.72rem; color: #4a6fa5; }
+  .api-badge {
+    background: #0a1f14;
+    border: 1px solid #22c55e40;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    color: #22c55e;
+    margin-top: 8px;
+  }
+  .sidebar-note {
+    font-size: 0.72rem;
+    color: #3a4a6a;
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    flex: 1;
+    padding: 28px 32px;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .dss-header {
+    background: linear-gradient(135deg, #0d1b35 0%, #091428 100%);
+    border: 1px solid #1a2a50;
+    border-radius: 16px;
+    padding: 26px 32px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .dss-header::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, #1d4ed8, #7c3aed, #db2777);
+  }
+  .dss-header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.03em;
+  }
+  .dss-header p { color: #6b7a9a; margin-top: 5px; font-size: 0.85rem; }
+
+  /* Upload bar */
+  .upload-bar {
+    background: #0d1626;
+    border: 1.5px dashed #1a3060;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #4a6fa5;
+    font-size: 0.88rem;
+  }
+  .upload-icon { font-size: 1.4rem; }
+  .upload-text strong { color: #6b9ae8; }
+  .upload-hint { font-size: 0.75rem; color: #2a3a5a; margin-top: 2px; }
+
+  /* Section label */
+  .sec-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #4a6fa5;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  /* 3-col grid */
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 20px; margin-bottom: 24px; }
+
+  /* Image boxes */
+  .img-box {
+    background: #0d1626;
+    border: 1px solid #1a2540;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .img-box-inner { position: relative; }
+  .mri-canvas {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+  }
+  .mri-svg { width: 100%; height: 100%; }
+  .img-label {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: #4a6fa5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px;
+    background: #0a1020;
+    border-top: 1px solid #1a2540;
+  }
+
+  /* Result card */
+  .result-card {
+    background: #0d1626;
+    border: 1px solid #1a2540;
+    border-radius: 12px;
+    padding: 22px;
+  }
+  .pred-class {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+  .pred-conf {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #4a6fa5;
+    margin-top: 5px;
+  }
+  .sev-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 12px 0 6px;
+    background: #1f0a0a;
+    color: #ef4444;
+    border: 1px solid #ef444440;
+  }
+  .urgency {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: #ef4444;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .sev-meter { display: flex; gap: 5px; margin: 10px 0; }
+  .sev-dot { width: 26px; height: 7px; border-radius: 4px; }
+  .dot-active { background: #ef4444; }
+  .dot-inactive { background: #1a2540; }
+  .desc-box {
+    background: #0a1525;
+    border-left: 3px solid #2563eb;
+    border-radius: 0 8px 8px 0;
+    padding: 11px 14px;
+    margin: 10px 0;
+    font-size: 0.8rem;
+    color: #8a9cbd;
+    line-height: 1.5;
+  }
+  .action-box {
+    background: #120a20;
+    border-left: 3px solid #7c3aed;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    color: #9b8ec4;
+    line-height: 1.5;
+  }
+
+  /* Prob chart */
+  .chart-section {
+    background: #0d1626;
+    border: 1px solid #1a2540;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  .prob-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .prob-row:last-child { margin-bottom: 0; }
+  .prob-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: #dce3f0;
+    width: 90px;
+    flex-shrink: 0;
+  }
+  .prob-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #111e38;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .prob-bar { height: 100%; border-radius: 5px; transition: width 0.5s; }
+  .prob-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: #4a6fa5;
+    width: 50px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* Gauge section */
+  .gauge-section {
+    background: #0d1626;
+    border: 1px solid #1a2540;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .gauge-wrap { position: relative; width: 160px; height: 90px; flex-shrink: 0; }
+  .gauge-svg { width: 160px; height: 90px; }
+  .gauge-number {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    text-align: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+  }
+  .gauge-info h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #dce3f0;
+    margin-bottom: 6px;
+  }
+  .gauge-info p { font-size: 0.82rem; color: #4a6fa5; line-height: 1.5; }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: #13100a;
+    border: 1px solid #f59e0b25;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.76rem;
+    color: #7a6830;
+    line-height: 1.5;
+  }
+
+  /* Colormap legend */
+  .cam-legend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: #0a1020;
+    border-top: 1px solid #1a2540;
+    justify-content: center;
+  }
+  .cam-grad {
+    width: 80px; height: 8px; border-radius: 4px;
+    background: linear-gradient(90deg, #00008b, #0000ff, #00ffff, #00ff00, #ffff00, #ff7f00, #ff0000);
+  }
+  .cam-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    color: #4a6fa5;
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ SIDEBAR ══ -->
+<div class="sidebar">
+  <div class="sidebar-title">🧠 Brain Tumor DSS</div>
+  <div class="sidebar-sub">ResNet-50 · Grad-CAM · v2.0</div>
+  <hr class="divider"/>
+
+  <div class="sidebar-section-title">Detectable Classes</div>
+  <div class="class-item">
+    <span class="class-icon">🔴</span>
+    <div><div class="class-name">Glioma</div><div class="class-info">Critical — malignant</div></div>
+  </div>
+  <div class="class-item">
+    <span class="class-icon">🟡</span>
+    <div><div class="class-name">Meningioma</div><div class="class-info">Moderate — usually benign</div></div>
+  </div>
+  <div class="class-item">
+    <span class="class-icon">🟡</span>
+    <div><div class="class-name">Pituitary</div><div class="class-info">Moderate — hormonal impact</div></div>
+  </div>
+  <div class="class-item">
+    <span class="class-icon">🟢</span>
+    <div><div class="class-name">No Tumor</div><div class="class-info">Normal — no finding</div></div>
+  </div>
+
+  <hr class="divider"/>
+  <div class="sidebar-section-title">About Grad-CAM</div>
+  <div class="sidebar-note">Gradient-weighted Class Activation Mapping highlights regions in the MRI the model focused on when making its prediction.</div>
+
+  <hr class="divider"/>
+  <div class="api-badge">✅ API Online · CPU</div>
+  <div class="sidebar-note">⚠️ Research use only. Not a substitute for clinical diagnosis.</div>
+</div>
+
+<!-- ══════════════════════════════════════════ MAIN ══ -->
+<div class="main">
+
+  <!-- Header -->
+  <div class="dss-header">
+    <h1>🧠 Brain Tumor Decision Support System</h1>
+    <p>Upload an MRI scan · Get classification · View Grad-CAM heatmap · Assess severity</p>
+  </div>
+
+  <!-- Upload bar -->
+  <div class="upload-bar">
+    <span class="upload-icon">📎</span>
+    <div>
+      <div><strong>Browse files</strong> or drag and drop your MRI image here</div>
+      <div class="upload-hint">Supported: JPG, PNG · Axial / Coronal / Sagittal views</div>
+    </div>
+  </div>
+
+  <!-- 3 columns -->
+  <div class="grid3">
+
+    <!-- Original MRI -->
+    <div>
+      <div class="sec-label">Original MRI</div>
+      <div class="img-box">
+        <div class="mri-canvas">
+          <svg class="mri-svg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="220" fill="#000"/>
+            <!-- Brain outline -->
+            <ellipse cx="110" cy="108" rx="88" ry="78" fill="none" stroke="#1a2a1a" stroke-width="1"/>
+            <ellipse cx="110" cy="108" rx="80" ry="70" fill="#0d1a0d"/>
+            <!-- Grey matter texture -->
+            <ellipse cx="110" cy="105" rx="72" ry="62" fill="#1c2e1c"/>
+            <ellipse cx="110" cy="105" rx="60" ry="52" fill="#243824"/>
+            <!-- Brain folds -->
+            <path d="M55 90 Q70 75 85 88 Q100 75 115 88 Q130 75 145 88 Q155 80 160 95" fill="none" stroke="#2d4a2d" stroke-width="2.5"/>
+            <path d="M50 108 Q65 98 80 108 Q95 98 110 108 Q125 98 140 108 Q155 98 165 108" fill="none" stroke="#2d4a2d" stroke-width="2"/>
+            <path d="M55 125 Q70 115 85 125 Q100 115 115 125 Q130 115 145 125 Q155 118 163 128" fill="none" stroke="#2d4a2d" stroke-width="2"/>
+            <!-- Corpus callosum -->
+            <path d="M78 105 Q110 92 142 105" fill="none" stroke="#3a5a3a" stroke-width="3"/>
+            <!-- Ventricles -->
+            <ellipse cx="95" cy="108" rx="10" ry="6" fill="#0d1a0d" opacity="0.7"/>
+            <ellipse cx="125" cy="108" rx="10" ry="6" fill="#0d1a0d" opacity="0.7"/>
+            <!-- Tumor highlight (glioma) -->
+            <ellipse cx="78" cy="88" rx="18" ry="15" fill="#3a2a0a" opacity="0.9"/>
+            <ellipse cx="78" cy="88" rx="13" ry="10" fill="#5a3a0a" opacity="0.8"/>
+            <ellipse cx="78" cy="88" rx="8" ry="6" fill="#8a5a12" opacity="0.9"/>
+            <!-- Skull -->
+            <ellipse cx="110" cy="108" rx="88" ry="78" fill="none" stroke="#3a4a3a" stroke-width="6"/>
+            <ellipse cx="110" cy="108" rx="94" ry="84" fill="none" stroke="#2a3a2a" stroke-width="4"/>
+            <!-- Mid line -->
+            <line x1="110" y1="36" x2="110" y2="176" stroke="#2d4a2d" stroke-width="1" stroke-dasharray="3,3"/>
+          </svg>
+        </div>
+        <div class="img-label">Input Scan</div>
+      </div>
+    </div>
+
+    <!-- Grad-CAM Heatmap -->
+    <div>
+      <div class="sec-label">Grad-CAM Heatmap</div>
+      <div class="img-box">
+        <div class="mri-canvas">
+          <svg class="mri-svg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="hotspot1" cx="35%" cy="40%" r="28%">
+                <stop offset="0%"   stop-color="#ff0000" stop-opacity="0.95"/>
+                <stop offset="30%"  stop-color="#ff4500" stop-opacity="0.85"/>
+                <stop offset="60%"  stop-color="#ff8c00" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#ffff00" stop-opacity="0.1"/>
+              </radialGradient>
+              <radialGradient id="warmspot" cx="60%" cy="55%" r="20%">
+                <stop offset="0%"   stop-color="#ff8c00" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#ffff00" stop-opacity="0.05"/>
+              </radialGradient>
+              <radialGradient id="coolspot" cx="65%" cy="40%" r="15%">
+                <stop offset="0%"   stop-color="#00bfff" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#0000ff" stop-opacity="0.05"/>
+              </radialGradient>
+            </defs>
+            <rect width="220" height="220" fill="#000"/>
+            <!-- Base brain -->
+            <ellipse cx="110" cy="108" rx="80" ry="70" fill="#0a120a"/>
+            <ellipse cx="110" cy="105" rx="72" ry="62" fill="#0d180d"/>
+            <!-- Cool base areas -->
+            <ellipse cx="130" cy="108" rx="45" ry="38" fill="#00008b" opacity="0.25"/>
+            <ellipse cx="110" cy="130" rx="50" ry="28" fill="#000080" opacity="0.2"/>
+            <!-- Warm mid areas -->
+            <ellipse cx="90" cy="100" rx="35" ry="28" fill="#006400" opacity="0.3"/>
+            <rect x="0" y="0" width="220" height="220" fill="url(#warmspot)"/>
+            <rect x="0" y="0" width="220" height="220" fill="url(#coolspot)"/>
+            <!-- HOT SPOT — tumor region -->
+            <rect x="0" y="0" width="220" height="220" fill="url(#hotspot1)"/>
+            <!-- Extra hot core -->
+            <ellipse cx="78" cy="88" rx="10" ry="8" fill="#ff0000" opacity="0.7"/>
+            <ellipse cx="78" cy="88" rx="6"  ry="5" fill="#ffffff" opacity="0.4"/>
+            <!-- Brain boundary -->
+            <ellipse cx="110" cy="108" rx="80" ry="70" fill="none" stroke="#1a2a1a" stroke-width="2"/>
+            <ellipse cx="110" cy="108" rx="94" ry="84" fill="none" stroke="#2a3a2a" stroke-width="4"/>
+          </svg>
+        </div>
+        <!-- Colormap legend -->
+        <div class="cam-legend">
+          <span class="cam-text">Low</span>
+          <div class="cam-grad"></div>
+          <span class="cam-text">High Activation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result card -->
+    <div>
+      <div class="sec-label">Diagnosis Result</div>
+      <div class="result-card">
+        <div style="padding-top:8px">
+          <div class="pred-class">Glioma</div>
+          <div class="pred-conf">Confidence: 94.32%</div>
+        </div>
+        <div class="sev-badge">● Critical Severity</div>
+        <div class="urgency">⚡ URGENT</div>
+        <div class="sev-meter">
+          <div class="sev-dot dot-active"></div>
+          <div class="sev-dot dot-active"></div>
+          <div class="sev-dot dot-active"></div>
+          <div class="sev-dot dot-active"></div>
+          <div class="sev-dot dot-active"></div>
+        </div>
+        <div class="desc-box">📋 Malignant brain tumor originating from glial cells. Most aggressive type.</div>
+        <div class="action-box">🏥 Immediate neurosurgery and oncology referral required.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Probability Breakdown -->
+  <div class="chart-section">
+    <div class="sec-label">Class Probability Breakdown</div>
+    <div class="prob-row">
+      <div class="prob-label">Glioma</div>
+      <div class="prob-bar-bg"><div class="prob-bar" style="width:94.3%;background:#ef4444;"></div></div>
+      <div class="prob-val">94.3%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-label">Meningioma</div>
+      <div class="prob-bar-bg"><div class="prob-bar" style="width:3.1%;background:#f59e0b;"></div></div>
+      <div class="prob-val">3.1%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-label">No Tumor</div>
+      <div class="prob-bar-bg"><div class="prob-bar" style="width:1.6%;background:#22c55e;"></div></div>
+      <div class="prob-val">1.6%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-label">Pituitary</div>
+      <div class="prob-bar-bg"><div class="prob-bar" style="width:1.0%;background:#3b82f6;"></div></div>
+      <div class="prob-val">1.0%</div>
+    </div>
+  </div>
+
+  <!-- Confidence Gauge -->
+  <div class="gauge-section">
+    <div class="gauge-wrap">
+      <svg class="gauge-svg" viewBox="0 0 160 90" xmlns="http://www.w3.org/2000/svg">
+        <!-- Background arc -->
+        <path d="M 15 80 A 65 65 0 0 1 145 80" fill="none" stroke="#111e38" stroke-width="12" stroke-linecap="round"/>
+        <!-- Colored arc — 94.3% of 180deg = 169.7deg -->
+        <path d="M 15 80 A 65 65 0 0 1 144 83" fill="none" stroke="#ef4444" stroke-width="12" stroke-linecap="round"/>
+        <!-- Tick marks -->
+        <line x1="15"  y1="80" x2="20"  y2="80" stroke="#1a2a50" stroke-width="2"/>
+        <line x1="80"  y1="15" x2="80"  y2="22" stroke="#1a2a50" stroke-width="2"/>
+        <line x1="145" y1="80" x2="140" y2="80" stroke="#1a2a50" stroke-width="2"/>
+        <!-- Labels -->
+        <text x="12"  y="76" font-size="8" fill="#4a6fa5" font-family="JetBrains Mono">0</text>
+        <text x="71"  y="13" font-size="8" fill="#4a6fa5" font-family="JetBrains Mono">50</text>
+        <text x="134" y="76" font-size="8" fill="#4a6fa5" font-family="JetBrains Mono">100</text>
+        <!-- Needle -->
+        <line x1="80" y1="80" x2="22" y2="20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="80" cy="80" r="5" fill="#ef4444"/>
+      </svg>
+      <div class="gauge-number">94.3%</div>
+    </div>
+    <div class="gauge-info">
+      <h3>High Confidence Prediction</h3>
+      <p>The model is 94.32% confident this MRI shows a <strong style="color:#ef4444">Glioma</strong>.<br/>
+      Scores above 85% indicate a reliable classification.<br/>
+      Always confirm with a licensed radiologist.</p>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    ⚠️ <strong>Clinical Disclaimer:</strong> This system is designed to assist qualified medical professionals
+    and is not a substitute for clinical judgment. All findings must be verified by a licensed radiologist
+    or neurosurgeon before clinical decisions are made. This tool is for research and educational purposes only.
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>

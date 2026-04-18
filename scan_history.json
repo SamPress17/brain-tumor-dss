@@ -1,0 +1,1146 @@
+[
+  {
+    "timestamp": "2026-04-18T08:44:34.737301Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-18T08:44:19.348613Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "notumor",
+    "confidence": 98.21,
+    "probabilities": {
+      "glioma": 0.43,
+      "meningioma": 0.42,
+      "notumor": 98.21,
+      "pituitary": 0.95
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 60.35
+  },
+  {
+    "timestamp": "2026-04-18T07:08:40.864021Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "meningioma",
+    "confidence": 57.88,
+    "probabilities": {
+      "glioma": 0.12,
+      "meningioma": 57.88,
+      "notumor": 0.03,
+      "pituitary": 41.98
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 49.17
+  },
+  {
+    "timestamp": "2026-04-18T07:07:22.926226Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "notumor",
+    "confidence": 98.21,
+    "probabilities": {
+      "glioma": 0.43,
+      "meningioma": 0.42,
+      "notumor": 98.21,
+      "pituitary": 0.95
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 60.35
+  },
+  {
+    "timestamp": "2026-04-18T07:06:30.649681Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "pituitary",
+    "confidence": 99.56,
+    "probabilities": {
+      "glioma": 0.02,
+      "meningioma": 0.39,
+      "notumor": 0.03,
+      "pituitary": 99.56
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Tumor in the pituitary gland. Often benign but affects hormones.",
+      "action": "Endocrinology and neurosurgery consultation recommended.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 56.92
+  },
+  {
+    "timestamp": "2026-04-18T07:04:59.388878Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "notumor",
+    "confidence": 66.83,
+    "probabilities": {
+      "glioma": 0.05,
+      "meningioma": 32.87,
+      "notumor": 66.83,
+      "pituitary": 0.24
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 51.28
+  },
+  {
+    "timestamp": "2026-04-18T06:41:42.968159Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "meningioma",
+    "confidence": 51.76,
+    "probabilities": {
+      "glioma": 0.02,
+      "meningioma": 51.76,
+      "notumor": 48.06,
+      "pituitary": 0.16
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 31.38
+  },
+  {
+    "timestamp": "2026-04-18T06:39:24.354049Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-18T06:39:15.725159Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-18T06:38:58.109804Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-18T06:38:33.884180Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-18T05:41:45.891286Z",
+    "patient": {
+      "patient_id": "Sam Press",
+      "age_sex": "18/M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Rajaji"
+    },
+    "prediction": "glioma",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 99.97,
+      "meningioma": 0.01,
+      "notumor": 0.01,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Critical",
+      "score": 5,
+      "color": "#e74c3c",
+      "description": "Malignant brain tumor originating from glial cells. Most aggressive type.",
+      "action": "Immediate neurosurgery and oncology referral required.",
+      "urgency": "URGENT"
+    },
+    "segmentation_area_pct": 41.74
+  },
+  {
+    "timestamp": "2026-04-18T05:41:36.315058Z",
+    "patient": {
+      "patient_id": "Sam Press",
+      "age_sex": "18/M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Rajaji"
+    },
+    "prediction": "glioma",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 99.97,
+      "meningioma": 0.01,
+      "notumor": 0.01,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Critical",
+      "score": 5,
+      "color": "#e74c3c",
+      "description": "Malignant brain tumor originating from glial cells. Most aggressive type.",
+      "action": "Immediate neurosurgery and oncology referral required.",
+      "urgency": "URGENT"
+    },
+    "segmentation_area_pct": 41.74
+  },
+  {
+    "timestamp": "2026-04-18T05:41:25.463572Z",
+    "patient": {
+      "patient_id": "Sam Press",
+      "age_sex": "18/M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Rajaji"
+    },
+    "prediction": "glioma",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 99.97,
+      "meningioma": 0.01,
+      "notumor": 0.01,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Critical",
+      "score": 5,
+      "color": "#e74c3c",
+      "description": "Malignant brain tumor originating from glial cells. Most aggressive type.",
+      "action": "Immediate neurosurgery and oncology referral required.",
+      "urgency": "URGENT"
+    },
+    "segmentation_area_pct": 41.74
+  },
+  {
+    "timestamp": "2026-04-18T05:41:08.647188Z",
+    "patient": {
+      "patient_id": "Sam Press",
+      "age_sex": "18/M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Rajaji"
+    },
+    "prediction": "notumor",
+    "confidence": 100.0,
+    "probabilities": {
+      "glioma": 0.0,
+      "meningioma": 0.0,
+      "notumor": 100.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 74.6
+  },
+  {
+    "timestamp": "2026-04-18T05:40:26.450670Z",
+    "patient": {
+      "patient_id": "Sam Press",
+      "age_sex": "18/M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Rajaji"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-18T05:40:13.280386Z",
+    "patient": {
+      "patient_id": "Sam Press",
+      "age_sex": "18/M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Rajaji"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-17T09:48:31.883762Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "pituitary",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 0.02,
+      "notumor": 0.0,
+      "pituitary": 99.97
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Tumor in the pituitary gland. Often benign but affects hormones.",
+      "action": "Endocrinology and neurosurgery consultation recommended.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 34.36
+  },
+  {
+    "timestamp": "2026-04-17T09:48:14.708602Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "pituitary",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 0.02,
+      "notumor": 0.0,
+      "pituitary": 99.97
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Tumor in the pituitary gland. Often benign but affects hormones.",
+      "action": "Endocrinology and neurosurgery consultation recommended.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 34.36
+  },
+  {
+    "timestamp": "2026-04-17T09:47:03.481696Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "pituitary",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 0.02,
+      "notumor": 0.0,
+      "pituitary": 99.97
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Tumor in the pituitary gland. Often benign but affects hormones.",
+      "action": "Endocrinology and neurosurgery consultation recommended.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 34.36
+  },
+  {
+    "timestamp": "2026-04-17T09:46:04.613624Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-17T09:44:06.300687Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 17.34
+  },
+  {
+    "timestamp": "2026-04-17T09:33:32.629740Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "glioma",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 99.97,
+      "meningioma": 0.01,
+      "notumor": 0.01,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Critical",
+      "score": 5,
+      "color": "#e74c3c",
+      "description": "Malignant brain tumor originating from glial cells. Most aggressive type.",
+      "action": "Immediate neurosurgery and oncology referral required.",
+      "urgency": "URGENT"
+    },
+    "segmentation_area_pct": 41.74
+  },
+  {
+    "timestamp": "2026-04-17T09:29:32.874537Z",
+    "patient": {
+      "patient_id": "PT-001",
+      "age_sex": "45 / M",
+      "scan_type": "MRI",
+      "referred_by": "Dr.X"
+    },
+    "prediction": "notumor",
+    "confidence": 100.0,
+    "probabilities": {
+      "glioma": 0.0,
+      "meningioma": 0.0,
+      "notumor": 100.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 74.6
+  },
+  {
+    "timestamp": "2026-04-17T09:29:21.803727Z",
+    "patient": {
+      "patient_id": "PT-001",
+      "age_sex": "45 / M",
+      "scan_type": "MRI",
+      "referred_by": "Dr.X"
+    },
+    "prediction": "notumor",
+    "confidence": 100.0,
+    "probabilities": {
+      "glioma": 0.0,
+      "meningioma": 0.0,
+      "notumor": 100.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 74.6
+  },
+  {
+    "timestamp": "2026-04-17T09:29:15.664369Z",
+    "patient": {
+      "patient_id": "PT-001",
+      "age_sex": "45 / M",
+      "scan_type": "MRI",
+      "referred_by": "Dr.X"
+    },
+    "prediction": "notumor",
+    "confidence": 100.0,
+    "probabilities": {
+      "glioma": 0.0,
+      "meningioma": 0.0,
+      "notumor": 100.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 74.6
+  },
+  {
+    "timestamp": "2026-04-17T09:07:24.392838Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "pituitary",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 0.02,
+      "notumor": 0.0,
+      "pituitary": 99.97
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Tumor in the pituitary gland. Often benign but affects hormones.",
+      "action": "Endocrinology and neurosurgery consultation recommended.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 24.03
+  },
+  {
+    "timestamp": "2026-04-17T09:06:56.652515Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "pituitary",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 0.02,
+      "notumor": 0.0,
+      "pituitary": 99.97
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Tumor in the pituitary gland. Often benign but affects hormones.",
+      "action": "Endocrinology and neurosurgery consultation recommended.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 24.03
+  },
+  {
+    "timestamp": "2026-04-17T09:03:57.070352Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "glioma",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 99.97,
+      "meningioma": 0.01,
+      "notumor": 0.01,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Critical",
+      "score": 5,
+      "color": "#e74c3c",
+      "description": "Malignant brain tumor originating from glial cells. Most aggressive type.",
+      "action": "Immediate neurosurgery and oncology referral required.",
+      "urgency": "URGENT"
+    },
+    "segmentation_area_pct": 29.52
+  },
+  {
+    "timestamp": "2026-04-17T08:58:37.375922Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "glioma",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 99.97,
+      "meningioma": 0.01,
+      "notumor": 0.01,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Critical",
+      "score": 5,
+      "color": "#e74c3c",
+      "description": "Malignant brain tumor originating from glial cells. Most aggressive type.",
+      "action": "Immediate neurosurgery and oncology referral required.",
+      "urgency": "URGENT"
+    },
+    "segmentation_area_pct": 29.52
+  },
+  {
+    "timestamp": "2026-04-17T08:43:10.970137Z",
+    "patient": {
+      "patient_id": "SamPress",
+      "age_sex": "18/M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr.Rajaji"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 10.82
+  },
+  {
+    "timestamp": "2026-04-17T08:42:56.105978Z",
+    "patient": {
+      "patient_id": "SamPress",
+      "age_sex": "18/M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 10.82
+  },
+  {
+    "timestamp": "2026-04-17T08:42:30.813474Z",
+    "patient": {
+      "patient_id": "SamPress",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 10.82
+  },
+  {
+    "timestamp": "2026-04-17T08:39:16.527148Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 10.82
+  },
+  {
+    "timestamp": "2026-04-17T08:31:19.240844Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "pituitary",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 0.02,
+      "notumor": 0.0,
+      "pituitary": 99.97
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Tumor in the pituitary gland. Often benign but affects hormones.",
+      "action": "Endocrinology and neurosurgery consultation recommended.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 24.03
+  },
+  {
+    "timestamp": "2026-04-17T08:30:59.464994Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "pituitary",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 0.02,
+      "notumor": 0.0,
+      "pituitary": 99.97
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Tumor in the pituitary gland. Often benign but affects hormones.",
+      "action": "Endocrinology and neurosurgery consultation recommended.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 24.03
+  },
+  {
+    "timestamp": "2026-04-17T08:26:54.797766Z",
+    "patient": {
+      "patient_id": "Sampress",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 10.82
+  },
+  {
+    "timestamp": "2026-04-17T08:26:39.566589Z",
+    "patient": {
+      "patient_id": "Sampress",
+      "age_sex": "45 / M",
+      "scan_type": "T1 MRI",
+      "referred_by": "Dr. Smith"
+    },
+    "prediction": "meningioma",
+    "confidence": 99.99,
+    "probabilities": {
+      "glioma": 0.01,
+      "meningioma": 99.99,
+      "notumor": 0.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Moderate",
+      "score": 3,
+      "color": "#f39c12",
+      "description": "Usually benign tumor arising from the meninges. Slow-growing.",
+      "action": "Neurology consultation and follow-up MRI advised.",
+      "urgency": "MONITOR"
+    },
+    "segmentation_area_pct": 10.82
+  },
+  {
+    "timestamp": "2026-04-17T08:21:19.142140Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "glioma",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 99.97,
+      "meningioma": 0.01,
+      "notumor": 0.01,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Critical",
+      "score": 5,
+      "color": "#e74c3c",
+      "description": "Malignant brain tumor originating from glial cells. Most aggressive type.",
+      "action": "Immediate neurosurgery and oncology referral required.",
+      "urgency": "URGENT"
+    },
+    "segmentation_area_pct": 29.52
+  },
+  {
+    "timestamp": "2026-04-17T08:20:57.274151Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "glioma",
+    "confidence": 99.97,
+    "probabilities": {
+      "glioma": 99.97,
+      "meningioma": 0.01,
+      "notumor": 0.01,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Critical",
+      "score": 5,
+      "color": "#e74c3c",
+      "description": "Malignant brain tumor originating from glial cells. Most aggressive type.",
+      "action": "Immediate neurosurgery and oncology referral required.",
+      "urgency": "URGENT"
+    },
+    "segmentation_area_pct": 29.52
+  },
+  {
+    "timestamp": "2026-04-17T08:18:52.128108Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "notumor",
+    "confidence": 100.0,
+    "probabilities": {
+      "glioma": 0.0,
+      "meningioma": 0.0,
+      "notumor": 100.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 64.73
+  },
+  {
+    "timestamp": "2026-04-17T08:17:41.552144Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "notumor",
+    "confidence": 100.0,
+    "probabilities": {
+      "glioma": 0.0,
+      "meningioma": 0.0,
+      "notumor": 100.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 64.73
+  },
+  {
+    "timestamp": "2026-04-17T08:17:28.354360Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "notumor",
+    "confidence": 100.0,
+    "probabilities": {
+      "glioma": 0.0,
+      "meningioma": 0.0,
+      "notumor": 100.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 64.73
+  },
+  {
+    "timestamp": "2026-04-17T08:17:03.234131Z",
+    "patient": {
+      "patient_id": "PT-00001",
+      "age_sex": "\u2014",
+      "scan_type": "T1 MRI",
+      "referred_by": "\u2014"
+    },
+    "prediction": "notumor",
+    "confidence": 100.0,
+    "probabilities": {
+      "glioma": 0.0,
+      "meningioma": 0.0,
+      "notumor": 100.0,
+      "pituitary": 0.0
+    },
+    "severity": {
+      "level": "Normal",
+      "score": 1,
+      "color": "#2ecc71",
+      "description": "No tumor detected in the MRI scan.",
+      "action": "No immediate action required. Routine follow-up as indicated.",
+      "urgency": "ROUTINE"
+    },
+    "segmentation_area_pct": 64.73
+  }
+]
